@@ -4,11 +4,16 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:MauiTabShell"
+    xmlns:pages="clr-namespace:MauiTabShell.Pages"
     Shell.FlyoutBehavior="Disabled">
-
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
-
+        Route="main">
+        <TabBar Route="tabs">
+            <ShellContent ContentTemplate="{DataTemplate pages:PageOne}" />
+            <ShellContent ContentTemplate="{DataTemplate pages:PageTwo}" />
+            <ShellContent ContentTemplate="{DataTemplate pages:PageThree}" />
+        </TabBar>
+    </ShellContent>
 </Shell>
