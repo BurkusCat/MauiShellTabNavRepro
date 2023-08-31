@@ -10,10 +10,16 @@
         Title="Home"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="main">
-        <TabBar Route="tabs">
-            <ShellContent ContentTemplate="{DataTemplate pages:PageOne}" />
-            <ShellContent ContentTemplate="{DataTemplate pages:PageTwo}" />
-            <ShellContent ContentTemplate="{DataTemplate pages:PageThree}" />
+        <TabBar x:Name="mainTabBar">
+            <ShellContent
+                ContentTemplate="{DataTemplate pages:PageOne}"
+                Route="PageOne" />
+            <ShellContent
+                ContentTemplate="{DataTemplate pages:PageTwo}"
+                Route="PageTwo" />
+            <ShellContent
+                ContentTemplate="{DataTemplate pages:PageThree}"
+                Route="PageThree" />
         </TabBar>
     </ShellContent>
 </Shell>

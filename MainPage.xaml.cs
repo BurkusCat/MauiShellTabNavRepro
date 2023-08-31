@@ -11,7 +11,7 @@
 
         private async void OnCounterClicked(object sender, EventArgs e)
         {
-            await Shell.Current.GoToAsync("tabs");
+            await Shell.Current.GoToAsync("PageOne");
         }
     }
 }
